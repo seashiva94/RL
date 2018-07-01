@@ -53,7 +53,7 @@ def updateBall(paddle1y, paddle2y, ballx, bally, ballxdir, ballydir):
         return [score, paddle1y, paddle2y, ballx, bally, ballxdir, ballydir]
 
 
-    if(ballx >= WINDOW_WIDTH - PADDLE_WIDTH - PADDLE_BUFFER and bally + BALL_HEIGHT >= paddle2y and bally - BALL_HEIGHT >=paddle2y + PADDLE_HEIGHT):
+    if(ballx >= WINDOW_WIDTH - PADDLE_WIDTH - PADDLE_BUFFER and bally + BALL_HEIGHT >= paddle2y and bally - BALL_HEIGHT <=paddle2y + PADDLE_HEIGHT):
         ballxdir = -1
 
     elif(ballx >= WINDOW_WIDTH - BALL_WIDTH):
