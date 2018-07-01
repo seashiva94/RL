@@ -116,7 +116,7 @@ def trainGraph(inp, out, sess):
             out_batch = out.eval(feed_dict = {inp: inp_t1_batch})
 
             for i in range(0, len(minibatch)):
-                gt_batch.append(reward_batch[i] + gamma*mp.max(out_batch[i]))
+                gt_batch.append(reward_batch[i] + GAMMA*mp.max(out_batch[i]))
 
             train_step.run(feed_dict = {
                 gt: gt_batch,
