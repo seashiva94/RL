@@ -28,7 +28,7 @@ rmsprop_cache = {k: np.zeros_like(v) for k,v in model.items()}
 
 #activation
 def sigmoid(x):
-    return 1.0 / (1.0 *np.exp(-x))
+    return 1.0 / (1.0 + np.exp(-x))
 
 def preprocess(I):
     # I = game image , crop, downsample
